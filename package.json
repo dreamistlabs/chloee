@@ -1,0 +1,29 @@
+{
+  "name": "chloee",
+  "version": "0.0.1",
+  "description": "A simple hexidecimal and rgb color converter",
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "babel src -o dist --source-maps inline",
+    "prepublishOnly": "npm run compile",
+    "test": "mocha --require babel-register --reporter spec test/*",
+    "watch": "babel src -o dist -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyitsjhu/chloee.git"
+  },
+  "author": "Johnny Hu <heyitsjhu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/heyitsjhu/chloee/issues"
+  },
+  "homepage": "https://github.com/heyitsjhu/chloee#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^4.1.0"
+  }
+}

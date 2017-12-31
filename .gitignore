@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# apple ds_store
+.DS_Store
+
+# production folder
+/dist/
