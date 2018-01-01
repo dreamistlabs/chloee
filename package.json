@@ -8,7 +8,7 @@
     "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- --require babel-register -R spec test/*",
     "prepublishOnly": "npm run compile",
     "test": "mocha --require babel-register --reporter spec test/*",
-    "watch": "babel src -o dist -w"
+    "watch": "babel src -d dist -w"
   },
   "repository": {
     "type": "git",
