@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import { expect } from 'chai';
 import Chloee from '../src/lib/Chloee';
 import chloee from '../src/index';
