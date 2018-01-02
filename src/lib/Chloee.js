@@ -90,4 +90,4 @@ class Chloee {
 
 }
 
-export default Chloee;
+module.exports = Chloee;
