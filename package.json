@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "compile": "babel src -d dist --source-maps inline",
-    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --require babel-register -R spec test/*",
+    "cover": "./node_modules/.bin/babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha -- -R spec test/* --require babel-register",
     "prepublishOnly": "npm run compile",
     "test": "mocha --require babel-register -R spec test/*",
     "watch": "babel src -o dist -w"
@@ -28,7 +28,6 @@
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "istanbul": "^0.4.5",
-    "mocha": "^4.1.0",
-    "mocha-lcov-reporter": "^1.3.0"
+    "mocha": "^4.1.0"
   }
 }
