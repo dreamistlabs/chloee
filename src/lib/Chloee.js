@@ -1,5 +1,5 @@
 class Chloee {
-  constructor(color, options = {}) {
+  constructor(color) {
     this._color = color;
     this._isRGB = false;
     this._isHEX = false;
@@ -41,7 +41,7 @@ class Chloee {
   convert() {
     if (this._isRGB) {
       return this.convertTo('hex', this._color);
-    } else if (this._isHEX) {
+    } else /* istanbul ignore else */ if (this._isHEX) {
       return this.convertTo('rgb', this._color);
     }
   }
@@ -75,7 +75,7 @@ class Chloee {
       }
       return result.join('');
 
-    } else if (type === 'rgb') {
+    } else /* istanbul ignore else */ if (type === 'rgb') {
       let converted_hex = color.split('').map((char) => {
         return char.match(/[abcdef]/i) ? this._code[char] : Number(char);
       });
