@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  font-size: inherit;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-weight: 300;
+}
+
+main {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+form {
+  margin: 0 auto;
+  width: 70%;
+  max-width: 20rem;
+}
+
+input {
+  position: relative;
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 0.1rem solid #eee;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #777;
+  letter-spacing: 1.6px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::placeholder {
+  color: #eee;
+}
+
+label {
+  display: none;
+  visibility: hidden;
+}
+
+#Chloee {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#site-header {
+  align-self: flex-start;
+  padding: 1rem;
+  width: 100%;
+}
+
+#site-main {
+  position: relative;
+  top: -2rem;
+}
+
+#site-footer {
+  padding: 0.3rem;
+  font-size: 0.6rem;
+}
+
+.main-heading {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.input-group {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 1rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.input-group:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  border-bottom: 2px solid #c470ee;
+  transition: width 0.3s linear
+}
+.input-group.active:after {
+  width: 100%;
+}
