@@ -39,9 +39,10 @@ class Chloee {
   }
 
   convert() {
+    /* istanbul ignore else */
     if (this._isRGB) {
       return this.convertTo('hex', this._color);
-    } else /* istanbul ignore else */ if (this._isHEX) {
+    } else if (this._isHEX) {
       return this.convertTo('rgb', this._color);
     }
   }
@@ -57,6 +58,7 @@ class Chloee {
   convertTo(type, color) {
     let result = [];
 
+    /* istanbul ignore else */
     if (type === 'hex') {
       let converted_rgb = [];
       color.split(',').map((char) => {
@@ -75,7 +77,7 @@ class Chloee {
       }
       return result.join('');
 
-    } else /* istanbul ignore else */ if (type === 'rgb') {
+    } else if (type === 'rgb') {
       let converted_hex = color.split('').map((char) => {
         return char.match(/[abcdef]/i) ? this._code[char] : Number(char);
       });
