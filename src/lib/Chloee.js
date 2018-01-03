@@ -1,5 +1,5 @@
 class Chloee {
-  constructor(color, options = {}) {
+  constructor(color) {
     this._color = color;
     this._isRGB = false;
     this._isHEX = false;
@@ -39,6 +39,7 @@ class Chloee {
   }
 
   convert() {
+    /* istanbul ignore else */
     if (this._isRGB) {
       return this.convertTo('hex', this._color);
     } else if (this._isHEX) {
@@ -57,6 +58,7 @@ class Chloee {
   convertTo(type, color) {
     let result = [];
 
+    /* istanbul ignore else */
     if (type === 'hex') {
       let converted_rgb = [];
       color.split(',').map((char) => {
@@ -90,4 +92,4 @@ class Chloee {
 
 }
 
-export default Chloee;
+module.exports = Chloee;
