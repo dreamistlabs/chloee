@@ -36,11 +36,13 @@ input {
   padding: 0.5rem;
   width: 100%;
   border: 0;
-  border-bottom: 0.1rem solid #eee;
+  border-bottom: 0.1rem solid #ccc;
+  background-color: transparent;
   font-family: 'Raleway', Helvetica, sans-serif;
   font-size: 1.1rem;
   font-weight: 300;
-  color: #777;
+  font-variant-ligatures: none;
+  color: #515151;
   letter-spacing: 1.6px;
 }
 
@@ -49,7 +51,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: #eee;
+  color: #ccc;
 }
 
 label {
@@ -64,7 +66,9 @@ label {
   align-items: center;
   width: 100vw;
   height: 100vh;
+  background-color: #fff;
   overflow: hidden;
+  transition: background-color .5s linear;
 }
 
 #site-header {
