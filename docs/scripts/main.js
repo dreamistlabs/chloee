@@ -23,7 +23,7 @@ $('#hex-input').change(function() {
 
   if (this.value.match(HEXFormat)) {
     const rgbCode = new Chloee(this.value).convert();
-    $('#rgb-input').val(rgbCode);
+    $('#rgb-input').val(`rgb(${rgbCode})`);
     $('#Chloee').css("background-color", `rgb(${rgbCode})`);
 
     updateTextAndBorderColorBasedOn(this.value);
@@ -32,11 +32,11 @@ $('#hex-input').change(function() {
 
 $('#rgb-input').change(function() {
   const RANGE = '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])';
-  const RGB_FORMAT = new RegExp(`^(${RANGE}[,\s]+){2}${RANGE}{1,3}`)
+  const RGB_FORMAT = new RegExp(`^(${RANGE}[,\s]+){2}${RANGE}{1,3}$`)
 
-  if (this.value.match(RGBFormat(RGB_FORMAT))) {
+  if (this.value.match(RGB_FORMAT)) {
     const hexCode = new Chloee(this.value).convert();
-    $('#hex-input').val(hexCode);
+    $('#hex-input').val(`#${hexCode}`);
     $('#Chloee').css("background-color", `#${hexCode}`);
 
     updateTextAndBorderColorBasedOn(hexCode);
