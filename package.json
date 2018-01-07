@@ -4,11 +4,13 @@
   "description": "A simple hexidecimal and rgb color converter",
   "main": "./dist/index.js",
   "scripts": {
-    "compile": "babel src -d dist --source-maps inline",
+    "babel": "babel src -d dist --source-maps inline",
+    "compile": "npm run babel && npm run uglify",
     "cover": "./node_modules/.bin/babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha -- -R spec test/* --require babel-register",
     "prepublishOnly": "npm run compile",
     "test": "mocha -R spec test/* --require babel-register",
-    "watch": "babel src -d dist -w"
+    "watch": "babel src -d dist -w",
+    "uglify": "uglifyjs src/lib/Chloee.js -co dist/lib/Chloee.min.js --source-map content='inline'"
   },
   "repository": {
     "type": "git",
@@ -25,9 +27,11 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
+    "browserify": "^15.0.0",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "istanbul": "^1.0.0-alpha",
-    "mocha": "^4.1.0"
+    "mocha": "^4.1.0",
+    "uglify-es": "^3.3.4"
   }
 }

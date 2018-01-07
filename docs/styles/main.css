@@ -42,7 +42,7 @@ input {
   font-size: 1.1rem;
   font-weight: 300;
   font-variant-ligatures: none;
-  color: #515151;
+  color: inherit;
   letter-spacing: 1.6px;
 }
 
@@ -67,8 +67,9 @@ label {
   width: 100vw;
   height: 100vh;
   background-color: #fff;
+  color: #515151;
   overflow: hidden;
-  transition: background-color .5s linear;
+  transition: all .5s linear;
 }
 
 #site-header {
@@ -112,4 +113,12 @@ label {
 }
 .input-group.active:after {
   width: 100%;
+}
+.font--light {
+  color: #fafafa !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.border--light {
+  border-bottom: 2px solid #fafafa;
 }
