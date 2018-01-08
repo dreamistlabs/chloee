@@ -7,7 +7,7 @@
     "babel": "babel src -d dist --source-maps inline",
     "compile": "npm run babel && npm run uglify",
     "cover": "./node_modules/.bin/babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha -- -R spec test/* --require babel-register",
-    "prepublishOnly": "npm run compile",
+    "prepublishOnly": "npm run babel",
     "test": "mocha -R spec test/* --require babel-register",
     "watch": "babel src -d dist -w",
     "uglify": "uglifyjs src/lib/Chloee.js -co dist/lib/Chloee.min.js --source-map content='inline'"
