@@ -61,4 +61,5 @@ typings/
 .DS_Store
 
 # production folder
-dist
+dist/lib/Chloee.js
+dist/index.js
