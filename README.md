@@ -16,7 +16,7 @@ npm install chloee
 Add the following to your HTML page's `<head>` section.
 
 ```
-<script src="https://cdn.rawgit.com/heyitsjhu/chloee/7e5dc7b1/dist/lib/Chloee.min.js"></script>
+<script src="https://cdn.rawgit.com/dreamistlabs/chloee/7977a151/dist/lib/Chloee.min.js"></script>
 ```
 
 ## Usage
