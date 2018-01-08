@@ -114,6 +114,17 @@ label {
 .input-group.active:after {
   width: 100%;
 }
+.footer-link,
+.footer-link:active,
+.footer-link:hover,
+.footer-link:visited {
+  text-decoration: none;
+  color: inherit;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+
 .font--light {
   color: #fafafa !important;
   -webkit-font-smoothing: antialiased;
