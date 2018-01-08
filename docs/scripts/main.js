@@ -1,10 +1,12 @@
 function updateTextAndBorderColorBasedOn(color) {
-  if (color < 'aaaaaa') {
+  if (color < 'bbbbbb') {
     $('#Chloee').addClass('font--light');
     $('input').addClass('border--light');
+    $('input').removeClass('border--dark');
   } else {
     $('#Chloee').removeClass('font--light');
     $('input').removeClass('border--light');
+    $('input').addClass('border--dark');
   }
 }
 
