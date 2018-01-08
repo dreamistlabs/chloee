@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyitsjhu/chloee.git"
+    "url": "git+https://github.com/dreamistlabs/chloee.git"
   },
   "author": "Johnny Hu <heyitsjhu@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/heyitsjhu/chloee/issues"
+    "url": "https://github.com/dreamistlabs/chloee/issues"
   },
-  "homepage": "https://github.com/heyitsjhu/chloee#readme",
+  "homepage": "https://github.com/dreamistlabs/chloee#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-polyfill": "^6.26.0",
