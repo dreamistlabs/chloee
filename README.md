@@ -26,9 +26,11 @@ Add the following to your HTML page's `<head>` section.
 ```
 const chloee = require('chloee');
 
-chloee('c470ee');   // '196,112,238'
+chloee('c470ee');
+// '196,112,238'
 
-chloee('196,122,238')   // 'c470ee'
+chloee('196,122,238');
+// 'c470ee'
 ```
 
 ### Browser
@@ -40,3 +42,6 @@ console.log(result);    // '196,112,238'
 var result = new Chloee('196,112,238').convert();
 console.log(result);    // 'c470ee'
 ```
+
+## License
+[MIT](https://github.com/heyitsjhu/chloee/blob/master/LICENSE)
