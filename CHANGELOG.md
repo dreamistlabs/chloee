@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 ## [Unreleased]
 - Changed: When returning an RGB value, the result will include the 'rgb' prefix and surrounding parentheses. For example, HEX code #C470EE will return rgb(196,112,238) instead of just 196,112,238.
 
+## 1.0.1 - 2018-xx-xx
+### Changed
+- Moved away from using browserify for building production files in favor of webpack.
+
 ## 1.0.0 - 2018-01-07
 ### Initial Release
 - Added: A demo page that users can use to convert hex/rgb values using Chloee.
