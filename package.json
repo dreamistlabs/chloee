@@ -4,13 +4,10 @@
   "description": "A simple hexidecimal and rgb color converter",
   "main": "./dist/index.js",
   "scripts": {
-    "babel": "babel src -d dist --source-maps inline",
-    "compile": "npm run babel && npm run uglify",
+    "build": "webpack",
     "cover": "./node_modules/.bin/babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha -- -R spec test/* --require babel-register",
-    "prepublishOnly": "npm run babel",
-    "test": "mocha -R spec test/* --require babel-register",
-    "watch": "babel src -d dist -w",
-    "uglify": "uglifyjs src/lib/Chloee.js -co dist/lib/Chloee.min.js --source-map content='inline'"
+    "prepublishOnly": "npm run build",
+    "test": "mocha -R spec test/* --require babel-register"
   },
   "repository": {
     "type": "git",
@@ -23,15 +20,14 @@
   },
   "homepage": "https://github.com/dreamistlabs/chloee#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "browserify": "^15.0.0",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "istanbul": "^1.0.0-alpha",
     "mocha": "^4.1.0",
-    "uglify-es": "^3.3.4"
+    "webpack": "^3.10.0"
   }
 }

@@ -7,7 +7,7 @@ install:
   - npm install
 
 script:
-  - npm run cover
+  - npm run build
 
 notifications:
   email:
