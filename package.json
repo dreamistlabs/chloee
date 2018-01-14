@@ -2,7 +2,7 @@
   "name": "chloee",
   "version": "1.0.0",
   "description": "A simple hexidecimal and rgb color converter",
-  "main": "./dist/index.js",
+  "main": "./dist/chloee.min.js",
   "scripts": {
     "build": "webpack",
     "cover": "./node_modules/.bin/babel-node ./node_modules/istanbul/lib/cli.js cover ./node_modules/.bin/_mocha -- -R spec test/* --require babel-register",
