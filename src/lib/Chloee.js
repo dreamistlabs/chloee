@@ -10,30 +10,25 @@ class Chloee {
       "f": 15
     }];
 
-    this.validate(this._color);
-    this.identifyFormat();
+    this.validateAndIdentify(this._color);
   }
 
-  validate(color) {
-    if (color === undefined) {
-      throw new Error('Missing Argument! Please provide a valide HEX or RGB value.');
-    } else if (typeof color !== 'string') {
-      throw new Error('Type Error! Argument must be a string.');
-    } else if (!this._color.match(HEXFormat) || !this._color.match(RGBFormat)) {
-      throw new Error("Format Error! Argument must be either a HEX code (e.g. #c470ee) or RGB value (e.g. 196,112,238).");
-    }
-  }
-
-  identifyFormat() {
+  validateAndIdentify(color) {
     const RGBRange = '([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])';
     const HEXFormat = new RegExp(/^#*[0-9abcdef]{6}/, 'i');
     const RGBFormat = new RegExp(`^(${RGBRange}[,\s]+){2}${RGBRange}{1,3}`);
 
-    if (this._color.match(HEXFormat)) {
-      this._isHEX = true;
-    } else if (this._color.match(RGBFormat)) {
-      this._isRGB = true;
+    if (color === undefined) {
+      throw new TypeError('Oops! Looks like you forgot to pass in a HEX or RGB value. Chloee requires a valid argument');
+    } 
+    else if (typeof color !== 'string') {
+      throw new TypeError(`Argument must be a string. You passed in ${color}`);
+    } 
+    else if (!this._color.match(HEXFormat) && !this._color.match(RGBFormat)) {
+      throw new Error(`Format Error! Argument must be a HEX code (e.g. #c470ee) or RGB value (e.g. 196,112,238). You entered ${color}`);
     }
+
+    color.match(HEXFormat) ? this._isHEX = true : this._isRGB = true;
   }
 
   convert() {

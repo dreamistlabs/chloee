@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import Chloee from '../src/lib/Chloee';
 import chloee from '../src/index';
 
-const HEX_TESTS = {
+const TESTS = {
   case1: { 'hex': 'abcdef', 'rgb': '171,205,239' },
   case2: { 'hex': 'c470ee', 'rgb': '196,112,238' },
   case3: { 'hex': '999999', 'rgb': '153,153,153' },
@@ -19,12 +19,12 @@ describe('new Chloee instance', () => {
   it('should return Missing Argument Error if argument is missing', () => {
     expect(function() {
       new Chloee();
-    }).to.throw(Error, /Missing Argument/i);
+    }).to.throw(TypeError);
   });
   it('should return Type Error if argument is not a string', () => {
     expect(function() {
       new Chloee(999999);
-    }).to.throw(Error, /Type Error/i);
+    }).to.throw(TypeError);
   });
   it('should return Format Error if HEX contains invalid letters', () => {
     expect(function() {
@@ -54,22 +54,22 @@ describe('new Chloee instance', () => {
 });
 
 describe('#convert', () => {
-  for (let test in HEX_TESTS) {
-    describe(`given a hex value of ${HEX_TESTS[test].hex}`, () => {
-      const result = chloee(HEX_TESTS[test].hex);
+  for (let test in TESTS) {
+    describe(`given a hex value of ${TESTS[test].hex}`, () => {
+      const result = chloee(TESTS[test].hex);
 
-      it(`should return ${HEX_TESTS[test].rgb}`, () => {
-        expect(result).to.equal(HEX_TESTS[test].rgb);
+      it(`should return ${TESTS[test].rgb}`, () => {
+        expect(result).to.equal(TESTS[test].rgb);
       });
     });
   }
 
-  for (let test in HEX_TESTS) {
-    describe(`given an rgb value of ${HEX_TESTS[test].rgb}`, () => {
-      const result = chloee(HEX_TESTS[test].rgb);
+  for (let test in TESTS) {
+    describe(`given an rgb value of ${TESTS[test].rgb}`, () => {
+      const result = chloee(TESTS[test].rgb);
 
-      it(`should return ${HEX_TESTS[test].hex}`, () => {
-        expect(result).to.equal(HEX_TESTS[test].hex);
+      it(`should return ${TESTS[test].hex}`, () => {
+        expect(result).to.equal(TESTS[test].hex);
       });
     });
   }
