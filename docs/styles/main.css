@@ -72,28 +72,31 @@ label {
   transition: all .5s linear;
 }
 
-#site-header {
+.header {
+  display: flex;
+  align-items: center;
   align-self: flex-start;
   padding: 1rem;
   width: 100%;
 }
 
-#site-main {
+.main-content {
   position: relative;
   top: -2rem;
 }
 
-#site-footer {
+.footer {
   padding: 0.3rem;
   font-size: 0.6rem;
 }
 
-.main-heading {
-  font-size: 0.9rem;
+.header--title {
+  display: inline-block;
+  font-size: 1rem;
   font-weight: 400;
 }
 
-.input-group {
+.form--input-group {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -101,7 +104,7 @@ label {
   border-bottom: 2px solid transparent;
 }
 
-.input-group:after {
+.form--input-group:after {
   content: "";
   position: absolute;
   left: 0;
@@ -111,17 +114,17 @@ label {
   border-bottom: 2px solid #c470ee;
   transition: width 0.3s linear
 }
-.input-group.active:after {
+.form--input-group.active:after {
   width: 100%;
 }
-.footer-link,
-.footer-link:active,
-.footer-link:hover,
-.footer-link:visited {
+.footer--link,
+.footer--link:active,
+.footer--link:hover,
+.footer--link:visited {
   text-decoration: none;
   color: inherit;
 }
-.footer-link:hover {
+.footer--link:hover {
   text-decoration: underline;
 }
 

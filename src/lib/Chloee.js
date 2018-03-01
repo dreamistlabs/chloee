@@ -1,16 +1,14 @@
 class Chloee {
+
   constructor(color) {
-    this._color = color;
-    this._isRGB = false;
-    this._isHEX = false;
-    this._code = {
+    [this._color, this._isRGB, this._isHEX, this._code] = [color, false, false, {
       "a": 10,
       "b": 11,
       "c": 12,
       "d": 13,
       "e": 14,
       "f": 15
-    }
+    }];
 
     this.validate(this._color);
     this.identifyFormat();
@@ -21,6 +19,8 @@ class Chloee {
       throw new Error('Missing Argument! Please provide a valide HEX or RGB value.');
     } else if (typeof color !== 'string') {
       throw new Error('Type Error! Argument must be a string.');
+    } else if (!this._color.match(HEXFormat) || !this._color.match(RGBFormat)) {
+      throw new Error("Format Error! Argument must be either a HEX code (e.g. #c470ee) or RGB value (e.g. 196,112,238).");
     }
   }
 
@@ -33,8 +33,6 @@ class Chloee {
       this._isHEX = true;
     } else if (this._color.match(RGBFormat)) {
       this._isRGB = true;
-    } else {
-      throw new Error("Format Error! Argument must be either a HEX code (e.g. #c470ee) or RGB value (e.g. 196,112,238).");
     }
   }
 

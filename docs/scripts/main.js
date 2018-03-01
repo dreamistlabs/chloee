@@ -24,7 +24,7 @@ $('#hex-input').change(function() {
   const HEXFormat = new RegExp(/^#*[0-9a-f]{6}$/, 'i');
 
   if (this.value.match(HEXFormat)) {
-    const rgbCode = new Chloee(this.value).convert();
+    const rgbCode = chloee(this.value);
     $('#rgb-input').val(`rgb(${rgbCode})`);
     $('#Chloee').css("background-color", `rgb(${rgbCode})`);
 
@@ -37,7 +37,7 @@ $('#rgb-input').change(function() {
   const RGB_FORMAT = new RegExp(`^(${RANGE}[,\s]+){2}${RANGE}{1,3}$`)
 
   if (this.value.match(RGB_FORMAT)) {
-    const hexCode = new Chloee(this.value).convert();
+    const hexCode = chloee(this.value);
     $('#hex-input').val(`#${hexCode}`);
     $('#Chloee').css("background-color", `#${hexCode}`);
 

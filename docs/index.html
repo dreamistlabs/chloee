@@ -17,23 +17,24 @@
 </head>
 <body>
   <div id="Chloee">
-    <header id="site-header">
-        <img src="./images/alien-3.svg"/>
+    <header class="header" id="site-header">
+        <img class="header--logo" src="./images/alien-3.svg"/>
+        <h1 class="header--title">Chloee</h1>
     </header>
-    <main id="site-main">
-      <form>
-        <div class="input-group">
+    <main class="main-content" id="site-main">
+      <form class="form">
+        <div class="form--input-group">
           <label for="hex-input">HEX Value</label>
           <input id="hex-input" name="hex" type="text" placeholder="#C470EE">
         </div>
-        <div class="input-group">
+        <div class="form--input-group">
           <label for="rgb-input">RGB Value</label>
           <input id="rgb-input" name="rgb" type="text" placeholder="rgb(196,112,238)">
         </div>
       </form>
     </main>
-    <footer id="site-footer">
-      <p>Created by <a href="http://www.heyitsjhu.com" class="footer-link">Johnny Hu</a></p>
+    <footer class="footer" id="site-footer">
+      <p class="footer--text">Created by <a class="footer--link" href="http://www.heyitsjhu.com">Johnny Hu</a></p>
     </footer>
   </div>
   <script src="./scripts/main.js"></script>
